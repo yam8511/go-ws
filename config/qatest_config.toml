@@ -1,0 +1,16 @@
+title = "system_config"
+
+[app]
+env = "qatest"
+host = "in-membe.vir999.com"
+port = ":6001"
+
+[redis.publish]
+ip = "10.251.33.152"
+port = ":1113"
+channel = "melon_member"
+max_link = 3
+
+[bot]
+token = "398704398:AAHCXu8FkrpcN0Bq70xYFbic7pyer7HO9Wc"
+chat_id = -1001218048968

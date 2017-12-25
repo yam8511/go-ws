@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Melon goSocket Demo</title>
+</head>
+<body>
+    <h1>Hello Melon</h1>
+    <p id="output"></p>
+
+<script>
+        var loc = window.location;
+        var uri = 'ws:';
+        if (loc.protocol === 'https:') {
+            uri = 'wss:';
+        }
+        // uri += '//' + loc.host + '/socket';
+        uri += '//localhost:8000/socket';
+
+        ws = new WebSocket(uri)
+        ws.onopen = function () {
+            loginData = {
+                user_id: 1
+            }
+            ws.send(JSON.stringify(loginData));
+            console.log('Connected')
+        }
+
+        ws.onmessage = function (evt) {
+            var out = document.getElementById('output');
+            out.innerHTML += evt.data + '<br>';
+        }
+
+    </script>
+</body>
+</html>

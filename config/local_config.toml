@@ -1,0 +1,16 @@
+title = "system_config"
+
+[app]
+env = "local"
+host = "in-member-dev.local"
+port = ":8000"
+
+[redis.publish]
+ip = "127.0.0.1"
+port = ":6378"
+channel = "melon_member"
+max_link = 3
+
+[bot]
+token = "398704398:AAHCXu8FkrpcN0Bq70xYFbic7pyer7HO9Wc"
+chat_id = 198405021

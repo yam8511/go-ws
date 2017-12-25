@@ -1,0 +1,16 @@
+title = "system_config"
+
+[app]
+env = "development"
+host = "in-member-dev.vir888.net"
+port = ":6001"
+
+[redis.publish]
+ip = "10.251.38.181"
+port = ":6500"
+channel = "melon_member"
+max_link = 3
+
+[bot]
+token = "398704398:AAHCXu8FkrpcN0Bq70xYFbic7pyer7HO9Wc"
+chat_id = -1001218048968
